@@ -44,21 +44,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="q9s-ex-47X">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="158"/>
+                                                    <rect key="frame" x="0.0" y="3" width="390" height="152"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="q9s-ex-47X" secondAttribute="bottom" constant="3" id="7TK-as-EcW"/>
                                                 <constraint firstItem="Yrt-T2-3Fn" firstAttribute="centerY" secondItem="9Rh-Md-KYY" secondAttribute="centerY" id="Arr-cK-LJv"/>
-                                                <constraint firstAttribute="bottom" secondItem="q9s-ex-47X" secondAttribute="bottom" id="HBj-fu-k1u"/>
                                                 <constraint firstItem="Yrt-T2-3Fn" firstAttribute="centerX" secondItem="9Rh-Md-KYY" secondAttribute="centerX" id="HHL-df-r4j"/>
                                                 <constraint firstAttribute="trailing" secondItem="q9s-ex-47X" secondAttribute="trailing" id="IzI-cV-aFx"/>
-                                                <constraint firstItem="q9s-ex-47X" firstAttribute="top" secondItem="9Rh-Md-KYY" secondAttribute="top" id="mF0-DW-P8O"/>
+                                                <constraint firstItem="q9s-ex-47X" firstAttribute="top" secondItem="9Rh-Md-KYY" secondAttribute="top" constant="3" id="O3A-hJ-MyQ"/>
                                                 <constraint firstItem="q9s-ex-47X" firstAttribute="leading" secondItem="9Rh-Md-KYY" secondAttribute="leading" id="vwj-hb-SKs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="categoryImage" destination="q9s-ex-47X" id="Rf1-Wt-h8V"/>
-                                            <outlet property="categoryTitle" destination="Yrt-T2-3Fn" id="C1A-PN-zlW"/>
+                                            <outlet property="categoryImage" destination="q9s-ex-47X" id="aNL-Fj-PYp"/>
+                                            <outlet property="categoryTitle" destination="Yrt-T2-3Fn" id="XMS-HM-Cky"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

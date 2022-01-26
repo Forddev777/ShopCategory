@@ -24,10 +24,9 @@ class CategoriesVC: UIViewController , UITableViewDataSource , UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoraCell") as? CategoryCell {
-            let categories = DataService.instance.getCategories()
-               _ = categories[indexPath.row]
-
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell {
+            let category = DataService.instance.getCategories()[indexPath.row]
+            cell.updateViews(category: category)
             return cell
         }else{
              return CategoryCell()
