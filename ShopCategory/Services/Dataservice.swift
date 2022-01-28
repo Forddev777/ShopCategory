@@ -18,13 +18,12 @@ class DataService {
             Category(title: "DIGITAL", imageName: "digital.png")
     ]
     
-    private let hats = [
+    private let shirts = [
+        Product(imageName: "shirt01.png" , title: "Devslopers Logo Shirt Black" , price: "$29" ),
+        Product(imageName: "shirt02.png", title: "Devslopers Logo Badge Shirt", price: "$22"),
+        Product(imageName: "shirt03.png", title: "Devslopers Shirt Grey" , price: "$45"),
+        Product(imageName: "shirt04.png", title:  "Devslopers Shirt Black" , price: "$56")
         
-        Product(imageName: "hat01.png" , title: "Devslopers Logo Graphic Beanie" , price: "$29" ),
-        Product(imageName: "hat02.png" , title: "Devslopers Logo Hat Black" , price: "$22" ),
-        Product(imageName: "hat03.png" , title: "Devslopers Logo Hat White" , price: "$45" ),
-        Product(imageName: "hat04.png" , title: "Devslopers Logo Snapblack" , price: "$33" )
-            
     ]
     
     
@@ -36,17 +35,16 @@ class DataService {
         Product(imageName: "hoodie04.png" , title: "Devslopers Hoodie Black" , price: "$33")
         
     ]
-    
-    
-    private let shirts = [
-        Product(imageName: "shirt01.png" , title: "Devslopers Logo Shirt Black" , price: "$29" ),
-        Product(imageName: "shirt02.png", title: "Devslopers Logo Badge Shirt", price: "$22"),
-        Product(imageName: "shirt03.png", title: "Devslopers Shirt Grey" , price: "$45"),
-        Product(imageName: "shirt04.png", title:  "Devslopers Shirt Black" , price: "$56")
+    private let hats = [
         
+        Product(imageName: "hat01.png" , title: "Devslopers Logo Graphic Beanie" , price: "$29" ),
+        Product(imageName: "hat02.png" , title: "Devslopers Logo Hat Black" , price: "$22" ),
+        Product(imageName: "hat03.png" , title: "Devslopers Logo Hat White" , price: "$45" ),
+        Product(imageName: "hat04.png" , title: "Devslopers Logo Snapblack" , price: "$33" )
+            
     ]
     
-    
+   
     private let digitalGoods = [Product]()
     
     func getCategories() -> [Category]{
