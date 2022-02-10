@@ -15,7 +15,6 @@ class CategoriesVC: UIViewController , UITableViewDataSource , UITableViewDelega
         super.viewDidLoad()
         categoryTable.delegate = self
         categoryTable.dataSource = self
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,10 +22,13 @@ class CategoriesVC: UIViewController , UITableViewDataSource , UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell")
+            as? CategoryCell {
             let category = DataService.instance.getCategories()[indexPath.row]
             cell.updateViews(category: category)
+    
+            
+            
             return cell
         }else{
              return CategoryCell()
@@ -36,18 +38,16 @@ class CategoriesVC: UIViewController , UITableViewDataSource , UITableViewDelega
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let category = DataService.instance.getCategories()[indexPath.row]
         performSegue(withIdentifier: "ProductVC", sender: category)
-        
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let productVC = segue.destination as? ProductVC{
+            let barBtn = UIBarButtonItem()
+             barBtn.title = ""
+             navigationItem.backBarButtonItem = barBtn
             assert(sender as? Category != nil)
             productVC.initProduct(category: sender as! Category)
             
-            let barBtn = UIBarButtonItem()
-            barBtn.title = ""
-            navigationItem.backBarButtonItem = barBtn
-              
         }
     }
 }
